@@ -1,0 +1,111 @@
+// basic colors
+$body-color: #eaebed !default;
+$body-contrast: #333 !default;
+
+$light-color: #f8f9fa !default;
+$light-contrast: #333 !default;
+
+$dark-color: #343a40 !default;
+$dark-contrast: #fff !default;
+
+$disabled-color: #666 !default;
+$disabled-contrast: #ccc !default;
+
+// default: #007bff
+$primary-color: #5295bb !default;
+$primary-contrast: #fff !default;
+
+$secondary-color: #6c757d !default;
+$secondary-contrast: #fff !default;
+
+$success-color: #28a745 !default;
+$success-contrast: #fff !default;
+
+$info-color: #17a2b8 !default;
+$info-contrast: #fff !default;
+
+$warning-color: #ffc107 !default;
+$warning-contrast: #333 !default;
+
+$danger-color: #dc3545 !default;
+$danger-contrast: #fff !default;
+
+// ---------------------------------------------- color groups
+
+// alpha colors: the main elements in a screen (menu, header,.. could be accent, hero is obviously hero, and standard is for regular components in the screen
+
+$alpha-color: #fff !default;
+$alpha-contrast: #333 !default;
+$alpha-text: $alpha-contrast !default;
+$alpha-link: $primary-color !default;
+$alpha-border: #aaa !default;
+
+$alpha-hero-color: #5295bb !default;
+$alpha-hero-text: #fff !default;
+$alpha-hero-link: $primary-color !default;
+$alpha-hero-border: #333 !default;
+
+$alpha-accent-color: #333 !default;
+$alpha-accent-contrast: #ddd !default;
+$alpha-accent-text: #ddd !default;
+$alpha-accent-link: #fafafa !default;
+$alpha-accent-border: #ccc !default;
+
+// beta colors: elements embedded in an alpha context
+
+$beta-color: #fff !default;
+$beta-contrast: #333 !default;
+$beta-text: #333 !default;
+$beta-link: #007bff !default;
+$beta-border: #ccc !default;
+
+$beta-hero-color: #5295bb !default;
+$beta-hero-contrast: #fff !default;
+$beta-hero-text: #fff !default;
+$beta-hero-link: #007bff !default;
+$beta-hero-border: #333 !default;
+
+$beta-accent-color: #bbb !default;
+$beta-accent-contrast: #333 !default;
+$beta-accent-text: $secondary-contrast !default;
+$beta-accent-link: $primary-color !default;
+$beta-accent-border: #ccc !default;
+
+// ------------------------------------------ derivatives
+
+// alpha colors
+
+$alpha-text-light: lighten($alpha-text, 20%) !default;
+$alpha-text-hover: darken($alpha-text, 20%) !default;
+$alpha-link-hover: darken($alpha-link, 20%) !default;
+
+$alpha-accent-text-light: lighten($alpha-accent-text, 20%) !default;
+$alpha-accent-text-hover: darken($alpha-accent-text, 20%) !default;
+$alpha-accent-link-hover: darken($alpha-accent-link, 20%) !default;
+
+$alpha-hero-text-light: lighten($alpha-hero-text, 20%) !default;
+$alpha-hero-text-hover: darken($alpha-hero-text, 20%) !default;
+$alpha-hero-link-hover: darken($alpha-hero-link, 20%) !default;
+
+// beta colors
+
+$beta-text-light: lighten($beta-text, 20%) !default;
+$beta-text-hover: darken($beta-text, 20%) !default;
+$beta-link-hover: darken($beta-link, 20%) !default;
+
+$beta-accent-text-light: lighten($beta-accent-text, 20%) !default;
+$beta-accent-text-hover: darken($beta-accent-text, 20%) !default;
+$beta-accent-link-hover: darken($beta-accent-link, 20%) !default;
+
+$beta-hero-text-light: lighten($beta-hero-text, 20%) !default;
+$beta-hero-text-hover: darken($beta-hero-text, 20%) !default;
+$beta-hero-link-hover: darken($beta-hero-link, 20%) !default;
+
+// ---------------------------------------- icons
+
+$icon-family: 'Font Awesome 5 Free' !default;
+$icon-weight: 900 !default;
+$icon-size: 14px !default;
+
+// ---------------------------------------- border
+$border: $beta-border solid 1px !default;

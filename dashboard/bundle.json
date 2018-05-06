@@ -1,0 +1,17 @@
+{
+	"name": "dashboard", 
+	"resources": {
+		"variables.sass": {
+			"url": "variables.sass"
+		}, 
+		"devices.sass": {
+			"url": "devices.sass"
+		},
+		"basics.sass": {
+			"url": "basics.sass"
+		}, 
+		"theme.sass": {
+			"url": "theme.sass"
+		}
+	}
+}

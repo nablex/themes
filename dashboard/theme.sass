@@ -1,0 +1,230 @@
+.d3-tooltip {
+	.nabu-field {
+		&.with-label {
+			label {
+				display: inline-block;
+				font-weight: bold;
+				&:after {
+					content: ': ';
+				}
+			}
+			.nabu-field-fragment {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+body {
+	background-color: $body-color;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html:root { 
+	font-size: 16px;
+	font-family: 'DejaVu Sans', 'Segoe UI', sans-serif;
+}
+
+#main {
+	.nabu-data-filter-default {
+		.filter {
+			z-index: 10;
+		}
+	}
+
+	.n-prompt-content {
+		background-color: $beta-color;
+		padding: 2rem;
+		border-radius: 5px;
+		box-shadow: 4px 4px 4px 4px #666;
+		.dashboard-form {
+			min-width: 40rem;
+		}
+	}
+	.page-cell {
+		position: relative;
+		box-shadow: 4px 4px 4px 4px $beta-border;
+		background-color: $beta-color;
+		padding: 1.3rem;
+		margin: 1rem;
+		border-radius: 2px;
+		& +.page-cell {
+			margin-left: 0;
+		}
+		h2 {
+			text-align: left;
+			font-size: 0.9rem;
+			padding: 0;
+			padding-bottom: 0.5rem;
+			margin-bottom: 1rem;
+			border: solid 1px $beta-border;
+			border-style: none none solid none;
+			overflow: visible;
+			font-weight: normal;
+		}
+	}
+	.global-actions {
+		padding: 1rem;
+		text-align: right;
+		a {
+			margin: 0 1rem;
+		}
+		button {
+			& + button {
+				margin-left: 0.3rem;
+			}
+		}
+	}
+	.dashboard-form {
+		.global-actions {
+			margin-top: 1rem;
+		}
+	}
+	.dashboard-cell {
+		.cell-actions {
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			padding: 1rem;
+			.n-icon {
+				cursor: pointer;
+			}
+			.filter {
+				position: absolute;
+				top: 100%;
+				right: 0;
+				background-color: $beta-color;
+				padding: 1rem;
+				min-width: 20rem;
+				border: $beta-border solid 1px;
+				.n-input-combo {
+					margin: 0;
+					margin-right: 0.3rem;
+				}
+			}
+		}
+	}
+	.dashboard-table {
+		table {
+			border: $beta-border solid 1px;
+			border-color: #5295bb;
+			border-style: solid solid none none;
+			thead {
+				td {
+					background-color: #5295bb;
+					color: #fff;
+					text-transform: uppercase;
+					font-weight: bold;
+					font-size: 0.7rem;
+					white-space: nowrap;
+					padding: 0.5rem 1rem;
+				}
+			}
+			tbody {
+				.nabu-field-fragment {
+					display: inline-block;
+				}
+				tr {
+					&:nth-child(even) {
+						background-color: rgba(82, 149, 187, 0.1);
+					}
+					&.selected {
+						background-color: #99c2d9;
+					}
+					td {
+						border: $beta-border solid 1px;
+						border-color: #5295bb;
+						border-style: none none solid solid;
+						padding: 0.5rem 1rem;
+						font-size: 0.7rem;
+						&.actions {
+							padding: 0 0.3rem;
+							text-align: center;
+							.n-icon {
+								&:before {
+									font-size: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.n-paging {
+		button {
+			font-size: 0.8rem;
+			font-weight: bold;
+			padding: 0.5rem;
+			border-radius: 5px;
+			cursor: pointer;
+			border: none;
+			background-color: #fff;
+			color: #666;
+			margin: 0.1rem;
+			line-height: 1rem;
+			&[disabled] {
+				background-color: #ddd;
+				color: #333;
+			}
+		}
+	}
+}
+
+.page-actions {
+	&.menu {
+		.special {
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-right: 1rem;
+		}
+		margin: 0;
+		padding: 0;
+		position: relative;
+		background-color: $alpha-accent-color;
+		border: $alpha-border solid 1px;
+		border-style: none none solid none;
+		a {
+			color: $alpha-accent-contrast;
+		}
+		.icon {
+			margin-right: 0.3rem;
+		}
+		.page-actions {
+			z-index: 10;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			.page-actions {
+				left: 100%;
+				top: 0;
+			}
+		}
+		li.page-tab {
+			white-space: nowrap;
+			color: $alpha-accent-contrast;
+			font-size: 0.8rem;
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			list-style: none;
+			padding: 0.7rem;
+			&:hover {
+				background-color: lighten($alpha-accent-color, 10%);
+			}
+			> span, > a {
+				white-space: nowrap;
+				display: inline-block;
+			}
+			li {
+				display: block;
+			}
+		}
+	}
+}

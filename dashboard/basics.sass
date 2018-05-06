@@ -1,0 +1,103 @@
+.primary {
+	background-color: $primary-color;
+	color: $primary-contrast;
+}
+.tag {
+	background-color: $primary-contrast;
+	color: $primary-color;
+	padding: 0.3rem 0.7rem;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+.secondary {
+	background-color: $secondary-color;
+	color: $secondary-contrast;
+}
+.success {
+	background-color: $success-color;
+	color: $success-contrast;
+}
+.info {
+	background-color: $info-color;
+	color: $info-contrast;
+}
+.warning {
+	background-color: $warning-color;
+	color: $warning-contrast;
+}
+.danger {
+	background-color: $danger-color;
+	color: $danger-contrast;
+}
+.danger, [disabled] {
+	background-color: $disabled-color;
+	color: $disabled-contrast;
+}
+.inline {
+	background-color: transparent;
+	color: $beta-contrast;
+}
+
+button {
+	border: none;
+	box-shadow: none;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	&.inline {
+		&:hover {
+			color: $beta-accent-color;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $primary-color;
+}
+
+input, select, textarea {
+	padding: 0.3rem 0.7rem;
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: $beta-color;
+	border: $beta-border solid 1px;
+	font-size: 1rem;
+
+	&[disabled] {
+		color: $disabled-contrast;
+		background-color: $disabled-color;
+	}
+}
+
+// spinner
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.spinner {
+	position: relative;
+}
+.spinner:before {
+	font-family: $icon-family;
+	font-weight: $icon-weight;
+	font-size: $icon-size;
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	margin-left: -10px;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	border-top-color: #333;
+	animation: spinner .6s linear infinite;
+}
