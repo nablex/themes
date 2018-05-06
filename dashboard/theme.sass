@@ -1,5 +1,5 @@
 .d3-tooltip {
-	.nabu-field {
+	.page-field {
 		&.with-label {
 			label {
 				display: inline-block;
@@ -8,7 +8,7 @@
 					content: ': ';
 				}
 			}
-			.nabu-field-fragment {
+			.page-field-fragment {
 				display: inline-block;
 			}
 		}
@@ -32,7 +32,7 @@ html:root {
 }
 
 #main {
-	.nabu-data-filter-default {
+	.page-data-filter-default {
 		.filter {
 			z-index: 10;
 		}
@@ -127,7 +127,7 @@ html:root {
 				}
 			}
 			tbody {
-				.nabu-field-fragment {
+				.page-field-fragment {
 					display: inline-block;
 				}
 				tr {
@@ -190,9 +190,6 @@ html:root {
 		background-color: $alpha-accent-color;
 		border: $alpha-border solid 1px;
 		border-style: none none solid none;
-		a {
-			color: $alpha-accent-contrast;
-		}
 		.icon {
 			margin-right: 0.3rem;
 		}
@@ -206,7 +203,7 @@ html:root {
 				top: 0;
 			}
 		}
-		li.page-tab {
+		li.page-action {
 			white-space: nowrap;
 			color: $alpha-accent-contrast;
 			font-size: 0.8rem;
@@ -219,6 +216,7 @@ html:root {
 				background-color: lighten($alpha-accent-color, 10%);
 			}
 			> span, > a {
+				color: $alpha-accent-contrast;
 				white-space: nowrap;
 				display: inline-block;
 			}
