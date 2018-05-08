@@ -31,7 +31,16 @@ html:root {
 	font-family: 'DejaVu Sans', 'Segoe UI', sans-serif;
 }
 
+.fa {
+	&:before {
+		font-size: 14px;
+	}
+}
+
 #main {
+	.settings {
+		white-space: normal;
+	}
 	.page-data-filter-default {
 		.filter {
 			z-index: 10;
@@ -43,7 +52,7 @@ html:root {
 		padding: 2rem;
 		border-radius: 5px;
 		box-shadow: 4px 4px 4px 4px #666;
-		.dashboard-form {
+		.page-form {
 			min-width: 40rem;
 		}
 	}
@@ -57,6 +66,8 @@ html:root {
 		& +.page-cell {
 			margin-left: 0;
 		}
+	}
+	.page-cell, .n-prompt {
 		h2 {
 			text-align: left;
 			font-size: 0.9rem;
@@ -81,7 +92,7 @@ html:root {
 			}
 		}
 	}
-	.dashboard-form {
+	.page-form {
 		.global-actions {
 			margin-top: 1rem;
 		}
@@ -116,7 +127,7 @@ html:root {
 			border-color: #5295bb;
 			border-style: solid solid none none;
 			thead {
-				td {
+				th {
 					background-color: #5295bb;
 					color: #fff;
 					text-transform: uppercase;
