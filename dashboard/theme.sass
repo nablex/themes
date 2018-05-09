@@ -41,7 +41,7 @@ html:root {
 	.settings {
 		white-space: normal;
 	}
-	.page-data-filter-default {
+	.data-filter-default {
 		.filter {
 			z-index: 10;
 		}
@@ -97,7 +97,7 @@ html:root {
 			margin-top: 1rem;
 		}
 	}
-	.dashboard-cell {
+	.data-cell {
 		.cell-actions {
 			position: absolute;
 			right: 1rem;
@@ -121,7 +121,7 @@ html:root {
 			}
 		}
 	}
-	.dashboard-table {
+	.data-table {
 		table {
 			border: $beta-border solid 1px;
 			border-color: #5295bb;
@@ -142,6 +142,7 @@ html:root {
 					display: inline-block;
 				}
 				tr {
+					cursor: pointer;
 					&:nth-child(even) {
 						background-color: rgba(82, 149, 187, 0.1);
 					}
@@ -157,6 +158,7 @@ html:root {
 						&.actions {
 							padding: 0 0.3rem;
 							text-align: center;
+							white-space: nowrap;
 							.n-icon {
 								&:before {
 									font-size: 10px;
