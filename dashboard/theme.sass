@@ -57,14 +57,16 @@ html:root {
 		}
 	}
 	.page-cell {
-		position: relative;
-		box-shadow: 4px 4px 4px 4px $beta-border;
-		background-color: $beta-color;
-		padding: 1.3rem;
-		margin: 1rem;
-		border-radius: 2px;
-		& +.page-cell {
-			margin-left: 0;
+		&:not(.has-page) {
+			position: relative;
+			box-shadow: 4px 4px 4px 4px $beta-border;
+			background-color: $beta-color;
+			padding: 1.3rem;
+			margin: 1rem;
+			border-radius: 2px;
+			& +.page-cell {
+				margin-left: 0;
+			}
 		}
 	}
 	.page-cell, .n-prompt {
