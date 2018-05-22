@@ -1,0 +1,6 @@
+${{
+configuration = application.configuration("nabu.web.page.core.types.configuration")
+echo("$breakpoints: ("
+	+ join(", ", derive(lambda(device, device/name + ": " + device/width + "px"), configuration/devices))
+	+ ");")
+}}
