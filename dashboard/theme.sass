@@ -37,6 +37,30 @@ html:root {
 	}
 }
 
+.code {
+	font-size: 0.8rem;
+	font-family: Monospace;
+}
+
+.n-form.filter {
+	.n-form-date {
+		.n-form-date-icon {
+			line-height: 1.8rem;
+			height: 1.8rem;
+			&:before {
+				font-size: 14px;
+			}
+		}
+		.n-input-date {
+			right: 0;
+			td {
+				background-color: $light-color;
+				color: $light-contrast;
+			}
+		}
+	}
+}
+
 #main {
 	.settings {
 		white-space: normal;
@@ -56,7 +80,7 @@ html:root {
 			min-width: 40rem;
 		}
 	}
-	.page-cell {
+	.page-cell.is-root {
 		&:not(.has-page) {
 			position: relative;
 			box-shadow: 4px 4px 4px 4px $beta-border;
@@ -166,6 +190,12 @@ html:root {
 									font-size: 10px;
 								}
 							}
+							button {
+								padding: 0.1rem 0.5rem;
+								&.danger-text, &.warning-text, &.info-text, &.primary-text, &.secondary-text, &.success-text {
+									background-color: transparent;
+								}
+							}
 						}
 					}
 				}
@@ -190,6 +220,14 @@ html:root {
 			}
 		}
 	}
+}
+
+.no-data {
+	padding: 1rem;
+	font-size: 0.8rem;
+	text-align: center;
+	background-color: $light-color;
+	color: $light-contrast;
 }
 
 .page-actions {
