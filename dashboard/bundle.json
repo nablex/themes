@@ -7,6 +7,9 @@
 		"devices.sass": {
 			"url": "devices.sass"
 		},
+		"include-media.sass": {
+			"url": "https://raw.githubusercontent.com/eduardoboucas/include-media/master/dist/_include-media.scss"
+		},
 		"basics.sass": {
 			"url": "basics.sass"
 		}, 
