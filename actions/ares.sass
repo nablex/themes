@@ -1,0 +1,99 @@
+// a simplistic menu with big buttons (on desktop)
+
+$actions-ares-color: $alpha-hero-color !default;
+$actions-ares-contrast: $alpha-hero-contrast !default;
+$actions-ares-primary-color: $alpha-accent-color !default;
+$actions-ares-primary-contrast: $alpha-accent-contrast !default;
+$actions-ares-secondary-color: $actions-ares-color !default;
+$actions-ares-secondary-contrast: $actions-ares-contrast !default;
+$actions-ares-dropdown-color: $alpha-contrast !default;
+$actions-ares-dropdown-contrast: $alpha-color !default;
+
+.page-actions.ares {
+	background-color: $actions-ares-color;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: flex;
+	.right {
+		margin-left: auto;
+	}
+	li.page-action {
+		list-style: none;
+		white-space: nowrap;
+	}
+	.page-actions {
+		z-index: 10;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		.page-actions {
+			left: 100%;
+			top: 0;
+		}
+	}
+	.page-action {
+		.icon {
+			margin-right: 0.5rem;
+		}
+	}
+}
+@include media(">=desktop") {
+	.page-actions.ares {
+		padding: 1rem;
+		.page-action {
+			.page-action-entry {
+				margin: 0.5rem;
+				&.right {
+					margin-left: auto;
+				}
+				display: inline-block;
+				padding: 1rem 1.3rem;
+				&.is-active:not(.secondary):not(.primary):not(.title) {
+					border: solid 2px $actions-ares-contrast;
+					border-style: none none solid none;
+				}
+			}
+			.secondary {
+				border: solid 2px $actions-ares-secondary-contrast;
+				color: solid 2px $actions-ares-secondary-contrast;
+				background-color: $actions-ares-secondary-color;
+				border-radius: 5px;
+				&.is-active {
+					background-color: darken($actions-ares-secondary-color, 15%);
+				}
+			}
+			.primary {
+				background-color: $actions-ares-primary-color;
+				color: $actions-ares-primary-contrast;
+				border: solid 2px $actions-ares-primary-contrast;
+				border-radius: 5px;
+				&.is-active {
+					background-color: darken($actions-ares-primary-color, 15%);
+				}
+			}
+		}
+		.title {
+			font-size: 1.6rem;
+		}
+	}
+}
+@include media("<desktop") {
+	.page-actions.ares {
+		.page-action {
+			.page-action-entry {
+				display: inline-block;
+				margin: 0.5rem;
+				padding: 0.3rem;
+			}
+			.page-actions {
+				background-color: $actions-ares-dropdown-color;
+				color: $actions-ares-dropdown-contrast;
+				display: block;
+				li {
+					display: block;
+				}
+			}
+		}
+	}
+}
