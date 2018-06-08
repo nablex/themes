@@ -84,8 +84,8 @@ html:root {
 			min-width: 40rem;
 		}
 	}
-	.page-cell.is-root {
-		&:not(.has-page) {
+	.page-cell.is-root, .is-plain .data-card {
+		&:not(.has-page):not(.is-plain) {
 			position: relative;
 			box-shadow: 4px 4px 4px 4px $beta-border;
 			background-color: $beta-color;
@@ -97,7 +97,7 @@ html:root {
 			}
 		}
 	}
-	.page-cell, .n-prompt {
+	.page-cell, .n-prompt, .is-plain .data-card {
 		h2 {
 			text-align: left;
 			font-size: 0.9rem;
@@ -128,7 +128,7 @@ html:root {
 		}
 	}
 	.data-cell {
-		.cell-actions {
+		.data-filter-default {
 			position: absolute;
 			right: 1rem;
 			top: 1rem;
@@ -148,6 +148,19 @@ html:root {
 					margin: 0;
 					margin-right: 0.3rem;
 				}
+			}
+		}
+		.data-combo-filter .combo-filter {
+			padding: 1rem 0;
+			display: flex;
+			.combo-filter-field {
+				flex-grow: 1;
+				input {
+					width: 100%;
+				}
+			}
+			button {
+				margin-left: 1rem;
 			}
 		}
 	}
@@ -240,6 +253,15 @@ html:root {
 }
 
 .page-actions {
+	li {
+		list-style: none;
+	}
+	&.buttons {
+		display: flex;
+		.right {
+			margin-left: auto;
+		}
+	}
 	&.menu {
 		.special {
 			font-weight: bold;
