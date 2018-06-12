@@ -164,6 +164,34 @@ html:root {
 			}
 		}
 	}
+	.data-table-list {
+		font-size: 0.7rem;
+		.combo-filter {
+			.n-input-combo-label-container {
+				.n-input-combo-label {
+					padding-top: 1.1rem;
+				}
+			}
+		}
+		.row {
+			.actions {
+				padding: 0 0.3rem;
+				text-align: center;
+				white-space: nowrap;
+				.n-icon {
+					&:before {
+						font-size: 10px;
+					}
+				}
+				button {
+					padding: 0.1rem 0.5rem;
+					&.danger-text, &.warning-text, &.info-text, &.primary-text, &.secondary-text, &.success-text {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
 	.data-table {
 		table {
 			border: $beta-border solid 1px;
@@ -186,9 +214,6 @@ html:root {
 					background-color: transparent;
 					font-size: 0.7rem;
 				}
-				.page-field-fragment {
-					display: inline-block;
-				}
 				tr {
 					cursor: pointer;
 					&:nth-child(even):not([custom-style=true]):not(.selected) {
@@ -197,26 +222,26 @@ html:root {
 					&.selected {
 						background-color: #99c2d9;
 					}
-					td {
-						border: $beta-border solid 1px;
-						border-color: #5295bb;
-						border-style: none none solid solid;
-						padding: 0.5rem 1rem;
-						font-size: 0.7rem;
-						&.actions {
-							padding: 0 0.3rem;
-							text-align: center;
-							white-space: nowrap;
-							.n-icon {
-								&:before {
-									font-size: 10px;
-								}
+				}
+				td {
+					border: $beta-border solid 1px;
+					border-color: #5295bb;
+					border-style: none none solid solid;
+					padding: 0.5rem 1rem;
+					font-size: 0.7rem;
+					&.actions {
+						padding: 0 0.3rem;
+						text-align: center;
+						white-space: nowrap;
+						.n-icon {
+							&:before {
+								font-size: 10px;
 							}
-							button {
-								padding: 0.1rem 0.5rem;
-								&.danger-text, &.warning-text, &.info-text, &.primary-text, &.secondary-text, &.success-text {
-									background-color: transparent;
-								}
+						}
+						button {
+							padding: 0.1rem 0.5rem;
+							&.danger-text, &.warning-text, &.info-text, &.primary-text, &.secondary-text, &.success-text {
+								background-color: transparent;
 							}
 						}
 					}

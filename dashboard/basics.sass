@@ -127,3 +127,20 @@ input, select, textarea {
 	display: block;
 	border-radius: 5px;
 }
+
+.n-form {
+	.row {
+		display: flex;
+		flex-direction: row;
+		> * {
+			flex-grow: 1;
+		}
+	}
+	.column {
+		display: flex;
+		flex-direction: column;
+		> * {
+			flex-grow: 1;
+		}
+	}
+}
