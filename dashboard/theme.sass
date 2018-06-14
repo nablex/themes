@@ -65,6 +65,10 @@ html:root {
 	}
 }
 
+.n-prompt-content {
+	max-width: 90vw;
+}
+
 #main {
 	.settings {
 		white-space: normal;
@@ -95,6 +99,17 @@ html:root {
 			& +.page-cell {
 				margin-left: 0;
 			}
+		}
+	}
+	.page-cell {
+		&.align-start {
+			align-self: flex-start;
+		}
+		&.align-end {
+			align-self: flex-end;
+		}
+		&.align-center {
+			align-self: center;
 		}
 	}
 	.page-cell, .n-prompt, .is-plain .data-card {
@@ -169,7 +184,7 @@ html:root {
 		.combo-filter {
 			.n-input-combo-label-container {
 				.n-input-combo-label {
-					padding-top: 1.1rem;
+					padding-top: 1rem;
 				}
 			}
 		}
@@ -266,6 +281,17 @@ html:root {
 				color: #333;
 			}
 		}
+	}
+}
+
+.data-multi-select-content {
+	.data-table-list {
+		.table-list {
+			margin: 0;
+		}
+	}
+	button {
+		background-color: transparent;
 	}
 }
 
