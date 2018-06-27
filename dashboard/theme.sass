@@ -112,6 +112,17 @@ html:root {
 			align-self: center;
 		}
 	}
+	.page-row {
+		&.justify-start {
+			justify-content: flex-start;
+		}
+		&.justify-end {
+			justify-content: flex-end;
+		}
+		&.justify-center {
+			justify-content: center;
+		}
+	}
 	.page-cell, .n-prompt, .is-plain .data-card {
 		h2 {
 			text-align: left;
@@ -358,6 +369,57 @@ html:root {
 			li {
 				display: block;
 			}
+		}
+	}
+}
+
+.data-card {
+	margin: 0;
+	padding: 0;
+	.data-card-actions {
+		display: flex;
+		padding-top: 1rem;
+		.right {
+			margin-left: auto;
+		}
+	}
+}
+
+
+.page-fields, .data-card {
+	.page-field {
+		+ .page-field {
+			margin-top: 1rem;
+		}
+		dt {
+			font-weight: bold;
+		}
+	}
+}
+
+.page-fields.row, .data-card.row {
+	.page-field {
+		display: flex;
+		+ .page-field {
+			margin-top: 1rem;
+		}
+		dt {
+			font-weight: bold;
+			&:after {
+				content: ': ';
+			}
+		}
+		dd {
+			flex-grow: 1;
+			text-align: right;
+		}
+	}
+}
+
+.page-cell.has-page {
+	.page-row {
+		> .page-cell:first-child {
+			margin-left: 0 !important;
 		}
 	}
 }
