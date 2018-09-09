@@ -46,6 +46,18 @@ html:root {
 	font-family: Monospace;
 }
 
+.nabu-cms-core-login {
+	.oauth2 {
+		text-align: center;
+		margin: 1rem auto;
+		.oauth2-option {
+			width: 20rem;
+			background-color: $primary-color;
+			color: $primary-contrast;
+		}
+	}
+}
+
 .n-form.filter {
 	.n-form-date {
 		.n-form-date-icon {
@@ -70,24 +82,6 @@ html:root {
 }
 
 #main {
-	.settings {
-		white-space: normal;
-	}
-	.data-filter-default {
-		.filter {
-			z-index: 10;
-		}
-	}
-
-	.n-prompt-content {
-		background-color: $beta-color;
-		padding: 2rem;
-		border-radius: 5px;
-		box-shadow: 4px 4px 4px 4px #666;
-		.page-form {
-			min-width: 40rem;
-		}
-	}
 	.page-cell.is-root, .is-plain .data-card {
 		&:not(.has-page):not(.is-plain) {
 			position: relative;
@@ -101,139 +95,183 @@ html:root {
 			}
 		}
 	}
-	.page-cell {
-		&.align-start {
-			align-self: flex-start;
-		}
-		&.align-end {
-			align-self: flex-end;
-		}
-		&.align-center {
-			align-self: center;
+	.page-cell.has-page.is-root:first-child {
+		margin-left: 1rem;
+	}
+}
+.settings {
+	// must go over prompt
+	z-index: 10001 !important;
+	white-space: normal;
+}
+.data-filter-default {
+	.filter {
+		z-index: 10;
+	}
+}
+
+.n-prompt-content {
+	background-color: $beta-color;
+	padding: 2rem;
+	border-radius: 5px;
+	box-shadow: 4px 4px 4px 4px #666;
+	.page-form {
+		min-width: 40rem;
+	}
+}
+
+.page {
+	.n-prompt-content {
+		max-height: 90vh;
+		&.overflow {
+			overflow: auto;
 		}
 	}
-	.page-row {
-		&.justify-start {
-			justify-content: flex-start;
-		}
-		&.justify-end {
-			justify-content: flex-end;
-		}
-		&.justify-center {
-			justify-content: center;
+}
+.page-cell {
+	&.columns {
+		> table {
+			width: 100%;
 		}
 	}
-	.page-cell, .n-prompt, .is-plain .data-card {
-		h2 {
-			text-align: left;
-			font-size: 0.9rem;
-			padding: 0;
-			padding-bottom: 0.5rem;
-			margin-bottom: 1rem;
-			border: solid 1px $beta-border;
-			border-style: none none solid none;
-			overflow: visible;
-			font-weight: normal;
+	&.align-start {
+		align-self: flex-start;
+	}
+	&.align-end {
+		align-self: flex-end;
+	}
+	&.align-center {
+		align-self: center;
+	}
+}
+.page-prompt {
+	&.overflow {
+		.n-prompt-content {
+			overflow: auto;
 		}
 	}
+}
+.page-row {
+	&.justify-start {
+		justify-content: flex-start;
+	}
+	&.justify-end {
+		justify-content: flex-end;
+	}
+	&.justify-center {
+		justify-content: center;
+	}
+}
+.page-cell, .n-prompt, .is-plain .data-card {
+	h2 {
+		text-align: left;
+		font-size: 0.9rem;
+		padding: 0;
+		padding-bottom: 0.5rem;
+		margin-bottom: 1rem;
+		border: solid 1px $beta-border;
+		border-style: none none solid none;
+		overflow: visible;
+		font-weight: normal;
+	}
+}
+.global-actions {
+	padding: 1rem;
+	text-align: right;
+	a {
+		margin: 0 1rem;
+	}
+	button {
+		& + button {
+			margin-left: 0.3rem;
+		}
+	}
+}
+.page-form {
 	.global-actions {
+		margin-top: 1rem;
+	}
+}
+.data-cell {
+	.data-filter-default {
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
 		padding: 1rem;
-		text-align: right;
-		a {
-			margin: 0 1rem;
+		.n-icon {
+			cursor: pointer;
+		}
+		.filter {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background-color: $beta-color;
+			padding: 1rem;
+			min-width: 20rem;
+			border: $beta-border solid 1px;
+			.n-input-combo {
+				margin: 0;
+				margin-right: 0.3rem;
+			}
+		}
+	}
+	.data-combo-filter .combo-filter {
+		padding: 1rem 0;
+		display: flex;
+		.combo-filter-field {
+			flex-grow: 1;
 		}
 		button {
-			& + button {
-				margin-left: 0.3rem;
+			margin-left: 1rem;
+		}
+	}
+}
+.data-table-list .row, .data-table table {
+	input {
+		line-height: 1rem;
+		height: 1rem;
+		border-style: none none dashed none;
+		font-size: 0.8rem;
+		padding: 0;
+	}
+}
+.data-table-list {
+	font-size: 0.7rem;
+	.combo-filter {
+		.n-input-combo-label-container {
+			.n-input-combo-label {
+				padding-top: 1rem;
 			}
 		}
 	}
-	.page-form {
-		.global-actions {
-			margin-top: 1rem;
-		}
-	}
-	.data-cell {
-		.data-filter-default {
-			position: absolute;
-			right: 1rem;
-			top: 1rem;
-			padding: 1rem;
+	.row {
+		.actions {
+			padding: 0 0.3rem;
+			text-align: center;
+			white-space: nowrap;
 			.n-icon {
-				cursor: pointer;
-			}
-			.filter {
-				position: absolute;
-				top: 100%;
-				right: 0;
-				background-color: $beta-color;
-				padding: 1rem;
-				min-width: 20rem;
-				border: $beta-border solid 1px;
-				.n-input-combo {
-					margin: 0;
-					margin-right: 0.3rem;
-				}
-			}
-		}
-		.data-combo-filter .combo-filter {
-			padding: 1rem 0;
-			display: flex;
-			.combo-filter-field {
-				flex-grow: 1;
-				input {
-					width: 100%;
+				&:before {
+					font-size: 10px;
 				}
 			}
 			button {
-				margin-left: 1rem;
-			}
-		}
-	}
-	.data-table-list .row, .data-table table {
-		input {
-			line-height: 1rem;
-			height: 1rem;
-			border-style: none none dashed none;
-			font-size: 0.8rem;
-		}
-	}
-	.data-table-list {
-		font-size: 0.7rem;
-		.combo-filter {
-			.n-input-combo-label-container {
-				.n-input-combo-label {
-					padding-top: 1rem;
-				}
-			}
-		}
-		.row {
-			.actions {
-				padding: 0 0.3rem;
-				text-align: center;
-				white-space: nowrap;
-				.n-icon {
-					&:before {
-						font-size: 10px;
-					}
-				}
-				button {
-					padding: 0.1rem 0.5rem;
-					&.danger-text, &.warning-text, &.info-text, &.primary-text, &.secondary-text, &.success-text {
-						background-color: transparent;
-					}
+				padding: 0.1rem 0.5rem;
+				&.danger-text, &.warning-text, &.info-text, &.primary-text, &.secondary-text, &.success-text {
+					background-color: transparent;
 				}
 			}
 		}
 	}
-	.data-table {
-		table {
-			border: $beta-border solid 1px;
-			border-color: #5295bb;
-			border-style: solid solid none none;
-			thead {
-				th {
-					background-color: #5295bb;
+}
+.data-table {
+	table.data {
+		border: $beta-border solid 1px;
+		border-color: #5295bb;
+		border-style: solid solid none none;
+		> thead {
+			> tr {
+				background-color: #5295bb;
+				> th {
 					color: #fff;
 					text-transform: uppercase;
 					font-weight: bold;
@@ -242,22 +280,23 @@ html:root {
 					padding: 0.5rem 1rem;
 				}
 			}
-			tbody {
-				input {
-					border-style: none none dashed none;
-					background-color: transparent;
-					font-size: 0.7rem;
+		}
+		> tbody {
+			input {
+				border-style: none none dashed none;
+				background-color: transparent;
+				font-size: 0.7rem;
+			}
+			> tr {
+				cursor: pointer;
+				&:nth-child(even):not([custom-style=true]):not(.selected) {
+					background-color: rgba(82, 149, 187, 0.1);
 				}
-				tr {
-					cursor: pointer;
-					&:nth-child(even):not([custom-style=true]):not(.selected) {
-						background-color: rgba(82, 149, 187, 0.1);
-					}
-					&.selected {
-						background-color: #99c2d9;
-					}
+				&.selected {
+					background-color: #99c2d9;
 				}
-				td {
+				> td {
+					font-weight: normal;
 					border: $beta-border solid 1px;
 					border-color: #5295bb;
 					border-style: none none solid solid;
@@ -283,22 +322,22 @@ html:root {
 			}
 		}
 	}
-	.n-paging {
-		button {
-			font-size: 0.8rem;
-			font-weight: bold;
-			padding: 0.5rem;
-			border-radius: 5px;
-			cursor: pointer;
-			border: none;
-			background-color: #fff;
-			color: #666;
-			margin: 0.1rem;
-			line-height: 1rem;
-			&[disabled] {
-				background-color: #ddd;
-				color: #333;
-			}
+}
+.n-paging {
+	button {
+		font-size: 0.8rem;
+		font-weight: bold;
+		padding: 0.5rem;
+		border-radius: 5px;
+		cursor: pointer;
+		border: none;
+		background-color: #fff;
+		color: #666;
+		margin: 0.1rem;
+		line-height: 1rem;
+		&[disabled] {
+			background-color: #ddd;
+			color: #333;
 		}
 	}
 }
@@ -396,6 +435,7 @@ html:root {
 
 .page-fields, .data-card {
 	.page-field {
+		font-size: 0.8rem;
 		+ .page-field {
 			margin-top: 1rem;
 		}
@@ -428,6 +468,46 @@ html:root {
 	.page-row {
 		> .page-cell:first-child {
 			margin-left: 0 !important;
+		}
+	}
+}
+
+.page-type-email {
+	.page-row {
+		display: table;
+		width: 100%;
+	}
+}
+
+@media print {
+	body, .page-cell, .page-rows {
+		background-color: white;
+	}
+	.page-cell {
+		display: none;
+	}
+	.not-printable {
+		display: none !important;
+	}
+	.page-type-page {
+		.page-cell.printable {
+			flex-grow: 1 !important;
+			margin: 0 !important;
+			box-shadow: none !important;
+			overflow: visible !important;
+			.page-cell {
+				display: initial;
+			}
+		}
+	}
+	.page-type-email {
+		width: 100% !important;
+		flex-grow: 1 !important;
+		margin: 0 !important;
+		overflow: visible !important;
+		.page-cell {
+			box-shadow: none !important;
+			display: table-cell;
 		}
 	}
 }
