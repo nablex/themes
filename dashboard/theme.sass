@@ -77,26 +77,34 @@ html:root {
 	}
 }
 
-.n-prompt-content {
-	max-width: 90vw;
+.is-plain {
+	h1 {
+		text-align: center;
+	}
 }
-
 #main {
+	.page-row {
+		padding: 0.5rem;
+		padding-bottom: 0;
+	}
+	.page-cell {
+		margin: 0.5rem;	
+	}
 	.page-cell.is-root, .is-plain .data-card {
 		&:not(.has-page):not(.is-plain) {
 			position: relative;
 			box-shadow: 4px 4px 4px 4px $beta-border;
 			background-color: $beta-color;
 			padding: 1.3rem;
-			margin: 1rem;
 			border-radius: 2px;
-			& +.page-cell {
-				margin-left: 0;
-			}
 		}
 	}
-	.page-cell.has-page.is-root:first-child {
-		margin-left: 1rem;
+	.page-cell.has-page .page-row {
+		padding:0.5rem 0;
+		padding-bottom: 0;
+		.page-cell.is-root:last-child {
+			margin-right: 0rem;
+		}
 	}
 }
 .settings {
@@ -118,6 +126,7 @@ html:root {
 	.page-form {
 		min-width: 40rem;
 	}
+	max-width: 90vw;
 }
 
 .page {
@@ -510,4 +519,7 @@ html:root {
 			display: table-cell;
 		}
 	}
+}
+[template="n-paging-prompt"] {
+	@extend .n-prompt-content;
 }
