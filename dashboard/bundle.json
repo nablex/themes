@@ -15,6 +15,9 @@
 		}, 
 		"theme.sass": {
 			"url": "theme.sass"
+		},
+		"menu-side.scss": {
+			"url": "menu-side.scss"
 		}
 	}
 }
