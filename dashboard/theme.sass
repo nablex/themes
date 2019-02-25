@@ -45,6 +45,11 @@ html:root {
 	font-size: 0.8rem;
 	font-family: Monospace;
 }
+.settings {
+	// must go over prompt
+	z-index: 10001 !important;
+	white-space: normal;
+}
 
 .nabu-cms-core-login {
 	.oauth2 {
@@ -107,11 +112,7 @@ html:root {
 		}
 	}
 }
-.settings {
-	// must go over prompt
-	z-index: 10001 !important;
-	white-space: normal;
-}
+
 .data-filter-default {
 	.filter {
 		z-index: 10;
