@@ -94,6 +94,13 @@ html:root {
 	}
 	.page-cell {
 		margin: 0.5rem;	
+		// if we have rows in cells, don't give them extra stuff
+		.page-row {
+			padding: 0;
+			.page-cell {
+				margin: 0;
+			}
+		}
 	}
 	.page-cell.is-root, .is-plain .data-card {
 		&:not(.has-page):not(.is-plain) {
@@ -389,7 +396,13 @@ html:root {
 		}
 	}
 }
-
+.load-more {
+	text-align: center;
+	padding: 1rem;
+	.load-more-button {
+		@extend .primary;
+	}
+}
 .data-multi-select-content {
 	.data-table-list {
 		.table-list {
@@ -420,7 +433,8 @@ html:root {
 		}
 	}
 	&.menu {
-		width: 100%;
+		// otherwise it breaks the menu that is wider than 100%
+		min-width: 100%;
 		.special {
 			font-weight: bold;
 			text-transform: uppercase;
@@ -580,4 +594,25 @@ html:root {
 }
 textarea {
 	min-height: 10rem;
+}
+
+.data-card-list.key-value {
+	flex-direction: column;
+	.data-card {
+		display: flex;
+		+ .data-card {
+			margin-top: 1rem;
+		}
+		.key {
+			font-weight: bold;
+			.page-field-fragment:after {
+				content: ': ';
+			}
+		}
+		.value {
+			margin-top: 0;
+			flex-grow: 1;
+			text-align: right;
+		}
+	}
 }
