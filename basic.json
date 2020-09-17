@@ -1,0 +1,17 @@
+{
+	"name": "basic", 
+	"resources": {
+		"variables.sass": {
+			"url": "dashboard/variables.sass"
+		}, 
+		"devices.sass": {
+			"url": "dashboard/devices.sass"
+		},
+		"include-media.sass": {
+			"url": "https://raw.githubusercontent.com/eduardoboucas/include-media/master/dist/_include-media.scss"
+		},
+		"basics.sass": {
+			"url": "dashboard/basics.sass"
+		}
+	}
+}
