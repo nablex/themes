@@ -1,6 +1,9 @@
 {
 	"name": "basic", 
 	"resources": {
+		"ptsans.css": {
+			"url": "ptsans.css"
+		},
 		"variables.sass": {
 			"url": "dashboard/variables.sass"
 		}, 
@@ -12,6 +15,9 @@
 		},
 		"basics.sass": {
 			"url": "dashboard/basics.sass"
+		},
+		"base-theme.scss": {
+			"url": "dashboard/base-theme.scss"
 		}
 	}
 }
