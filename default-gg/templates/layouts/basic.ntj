@@ -1,0 +1,32 @@
+{ 
+	"category": "Layouts",
+	"name": "Basic",
+	"description": "A basic layout with a top menu and the content underneath.",
+	"icon": "page/core/layouts/three-columns.png",
+	"content": {
+		"type":"page-row",
+		"content": {
+			"direction": "vertical",
+			"name": "Basic Container",
+			"class": "basic-container",
+			"cells": [
+				{
+					"name": "Main Menu",
+					"alias": "page-actions",
+					"class": "basic-main-menu",
+					"state": {
+						"actions": [{
+							"route": "home",
+							"label": "Home"
+						}]
+					}
+				},
+				{
+					"name": "Main Content",
+					"customId": "main",
+					"class": "basic-content"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"name": "theme-gg",
+	"version": "1.0",
+	"resources": {
+		"overrides": {
+			"variables.scss": {
+				"url": "variables.scss"
+			}
+		},
+		"web-plato-dashboard.json": {
+			"type": "bundle",
+			"url": "https://raw.githubusercontent.com/nabu-platform/web-plato-dashboard/master/bundle.json"
+		},
+		"templates": {
+			"layouts": {
+				"basic.ntj": {
+					"url": "templates/layouts/basic.ntj"
+				},
+				"style.scss": {
+					"url": "templates/layouts/style.scss"
+				}
+			}
+		}
+	}
+}
