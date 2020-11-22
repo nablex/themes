@@ -5,28 +5,30 @@
 	"icon": "page/core/layouts/three-columns.png",
 	"content": {
 		"type":"page-row",
-		"content": {
+		"content": [{
+			"name": "Basic Menu",
+			"class": "basic-menu-container",
+			"condition": "$services.user.loggedIn",
+			"cells": [{
+				"name": "Main Menu",
+				"alias": "page-actions",
+				"state": {
+					"class": "basic-main-menu",
+					"autoActions": true,
+					"isFixedHeader": true
+				}
+			}]
+		}, {
 			"direction": "vertical",
 			"name": "Basic Container",
 			"class": "basic-container",
 			"cells": [
-				{
-					"name": "Main Menu",
-					"alias": "page-actions",
-					"class": "basic-main-menu",
-					"state": {
-						"actions": [{
-							"route": "home",
-							"label": "Home"
-						}]
-					}
-				},
 				{
 					"name": "Main Content",
 					"customId": "main",
 					"class": "basic-content"
 				}
 			]
-		}
+		}]
 	}
 }

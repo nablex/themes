@@ -1,8 +1,82 @@
+.basic-menu-container {
+	z-index: 99;
+	.basic-main-menu {
+		margin: 0;
+		padding: 0;
+		&.page-actions-root {
+			width: 100vw;
+			background-color: $color-secondary-dark;
+			.page-action-entry {
+				color: $color-primary-base;
+				&:hover {
+					background-color: $color-secondary-base;
+				}
+			}
+			border-bottom: solid 1px $color-secondary-base;
+			padding-left: calc((100vw - 64rem) / 2);
+			padding-right: calc((100vw - 64rem) / 2);
+		}
+		.page-action-entry {
+			white-space: nowrap;
+			cursor: pointer;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			margin: 0;
+			&:first-letter {
+				text-transform: uppercase;
+			}
+		}
+		&.page-actions-child {
+			background-color: $color-primary-lightest;
+			.page-action-entry {
+				color: $color-primary-darkest;
+				border-bottom-width: 1px;
+				&:hover {
+					background-color: $color-primary-light;
+				}
+			}
+			border: solid 1px $color-primary-base;
+			border-radius: 3px;
+			border-bottom: none;
+			padding: 0;
+			margin: 0;
+			li {
+				border-bottom: solid 1px $color-primary-base;
+			}
+		}
+		padding: 0;
+		margin: 0;
+		display: flex;
+		> li {
+			position: relative;
+			> ul {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				display: block;
+			}
+			
+		}
+	}
+}
 .basic-container {
 	max-width: 64rem;
 	margin: 0 auto;
-	background-color: $color-primary-darkest;
-	.page-action-entry {
-		color: $color-primary-lightest;
+	.basic-main-menu.page-actions-root {
+		background-color: white;
+		border: solid 1px $color-primary-lighter;
+		border-top: none;
+		border-radius: 3px;
+		.page-action-entry {
+			color: $color-primary-dark;
+			
+			border-bottom: solid 2px $color-primary-base;
+			&:hover {
+				background-color: $color-primary-base;
+				border-bottom-color: $color-primary-dark;
+			}
+		}
+		
 	}
 }

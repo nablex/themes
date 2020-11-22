@@ -13,8 +13,8 @@
 		},
 		"templates": {
 			"layouts": {
-				"basic.ntj": {
-					"url": "templates/layouts/basic.ntj"
+				"basic.npt": {
+					"url": "templates/layouts/basic.npt"
 				},
 				"style.scss": {
 					"url": "templates/layouts/style.scss"
