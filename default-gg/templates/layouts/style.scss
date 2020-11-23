@@ -4,6 +4,7 @@
 		margin: 0;
 		padding: 0;
 		&.page-actions-root {
+			min-height: 3rem;
 			width: 100vw;
 			background-color: $color-secondary-dark;
 			.page-action-entry {
@@ -23,7 +24,7 @@
 			padding: 1rem;
 			display: block;
 			margin: 0;
-			&:first-letter {
+			:first-letter {
 				text-transform: uppercase;
 			}
 		}
