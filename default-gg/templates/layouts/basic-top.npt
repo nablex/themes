@@ -1,19 +1,19 @@
 { 
 	"category": "Layouts",
-	"name": "Basic",
+	"name": "Top Menu",
 	"description": "A basic layout with a top menu and the content underneath.",
-	"icon": "page/core/layouts/three-columns.png",
+	"icon": "templates/layouts/menu-top.png",
 	"content": {
 		"type":"page-row",
 		"content": [{
-			"name": "Basic Menu",
-			"class": "basic-menu-container",
+			"name": "Top Menu",
+			"class": "full-width",
 			"condition": "$services.user.loggedIn",
 			"cells": [{
 				"name": "Main Menu",
 				"alias": "page-actions",
 				"state": {
-					"class": "basic-main-menu",
+					"class": "menu",
 					"autoActions": true,
 					"isFixedHeader": true
 				}
@@ -32,3 +32,4 @@
 		}]
 	}
 }
+

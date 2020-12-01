@@ -13,11 +13,20 @@
 		},
 		"templates": {
 			"layouts": {
-				"basic.npt": {
-					"url": "templates/layouts/basic.npt"
+				"basic-top.npt": {
+					"url": "templates/layouts/basic-top.npt"
+				},
+				"basic-left.npt": {
+					"url": "templates/layouts/basic-left.npt"
 				},
 				"style.scss": {
 					"url": "templates/layouts/style.scss"
+				},
+				"menu-left.png": {
+					"url": "templates/layouts/menu-left.png"
+				},
+				"menu-top.png": {
+					"url": "templates/layouts/menu-top.png"
 				}
 			}
 		}
