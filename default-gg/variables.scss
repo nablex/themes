@@ -3,8 +3,39 @@ $font-family-alt: $font-family;
 $font-icon-family: "Font Awesome 5 Free";
 
 
+/* make sure aggregate charts take up the full height, otherwise the legend might for example get cut off even though there is plenty of space */
+[route="frappe-aggregate-chart"] {
+	height: 100%;
+	.frappe-aggregate-chart {
+		height: 100%;
+		.chart-container-parent {
+			/* leave some room for the data-common-header */
+		 	height: calc(100% - 2rem);
+		 	.chart-container {
+		 		height: 100%;
+		 		svg {
+		 			height: 100%;
+		 		}
+		 	}
+		}
+	}
+}
+
+/* make sure the entries don't break */
+.page-actions.menu {
+	.page-action-entry {
+		white-space: nowrap;
+	}
+}
+
+/* the buttons are wrongly positioned by default, this is a quick fix */
+.data-table-list .data-common-footer .global-actions {
+	margin-top: -9px;
+}
+
 // ---------------------------------------------- brand colors
 
+/*
 $color-primary-lightest: #F4F5F6 !default;
 $color-primary-lighter: #E9EBED !default;
 $color-primary-light: #DDE0E3 !default;
@@ -20,10 +51,11 @@ $color-secondary-base: #40474F !default;
 $color-secondary-dark: #1C1E22 !default;
 $color-secondary-darker: #121416 !default;
 $color-secondary-darkest: #090A0B !default;
-
+*/
 
 // ---------------------------------------------- neutral colors
 
+/*
 $color-neutral-lightest: #F4F5F6 !default;
 $color-neutral-lighter: #F6F6F6 !default;
 $color-neutral-light: #D2D2CA !default;
@@ -34,6 +66,7 @@ $color-neutral-darkest: #3B4344 !default;
 
 $color-neutral-black: #000000 !default;
 $color-neutral-white: #FFFFFF !default;
+*/
 
 
 // ------------------------ breakpoints
