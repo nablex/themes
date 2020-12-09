@@ -32,7 +32,7 @@
 		},
 		"extensions": {
 			"additional.scss": {
-				"url": "additional.scss"
+				"url": "extensions/additional.scss"
 			}
 		}
 	}
