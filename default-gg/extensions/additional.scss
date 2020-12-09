@@ -25,6 +25,7 @@
 	}
 }
 
+/* fix date styling */
 .n-input-date {
 	.n-input-date-available {
 		.n-input-date-label {
@@ -45,6 +46,8 @@
 	}
 }
 
+/* we don't want actions to overflow, just take up more space */
+/* additionally actual buttons should not have margin... */
 .data-table-list .actions {
 	white-space: nowrap;
 	button {
@@ -54,3 +57,53 @@
 		}
 	}
 }
+
+/* style data cards */
+.data-cards {
+	.data-card {
+		.data-card-field {
+			dt {
+				font-weight: bold;
+				display: block;
+			}
+			dd {
+				padding: 0;
+				margin: 0;
+			}
+			
+			+.data-card-field {
+				margin-top: 0.7rem;
+			}
+		}
+	}
+}
+.data-card-list.row {
+	.data-card {
+		padding: 1rem;
+		border: solid 1px $color-neutral-light;
+		border-radius: 3px;
+		background-color: $color-neutral-lightest;
+		.page-field {
+			display: flex;
+			+ .page-field {
+				margin-top: 1rem;
+			}
+			dt {
+				font-weight: bold;
+				&:after {
+					content: ': ';
+				}
+				min-width: 7rem;
+			}
+			dd {
+				flex-grow: 1;
+				text-align: right;
+				margin-left: 2rem;
+			}
+		}
+		&:hover {
+			border-color: $color-neutral-dark;
+		}
+	}
+}
+
