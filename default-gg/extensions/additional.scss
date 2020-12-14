@@ -77,6 +77,21 @@
 		}
 	}
 }
+
+.data-card-list {
+	margin: -0.7rem;
+	.data-card {
+		margin: 0.7rem;
+		.data-card-actions {
+			text-align: right;
+			padding-top: 1rem;
+			button {
+				margin: 0;
+			}
+		}
+	}
+}
+
 .data-card-list.row {
 	.data-card {
 		padding: 1rem;

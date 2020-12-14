@@ -21,6 +21,13 @@ $font-icon-family: "Font Awesome 5 Free";
 	}
 }
 
+.data-common-header .data-combo-filter {
+	max-width: 64rem !important;
+	.n-input-combo-label-container + div {
+		flex-grow: 1;
+	}
+}
+
 /* make sure the entries don't break */
 .page-actions.menu {
 	.page-action-entry {
@@ -28,9 +35,53 @@ $font-icon-family: "Font Awesome 5 Free";
 	}
 }
 
+.n-prompt-content .code {
+	display: block;
+	max-width: 80vw;
+	font-size: 0.7rem;
+	.hljs {
+		font-size: 0.7rem;	
+		* {
+			font-size: 0.7rem;
+		}
+	}
+}
+
 /* the buttons are wrongly positioned by default, this is a quick fix */
 .data-table-list .data-common-footer .global-actions {
 	margin-top: -9px;
+}
+
+
+.danger {
+	border-bottom: solid 1px red;
+	color: red;
+}
+.danger-text {
+	color: red;
+	background: none;
+	border: none;
+}
+.success {
+	border-bottom: solid 1px green;
+	color: green;
+}
+.success-text {
+	color: green;
+	background: none;
+	border: none;
+}
+.warning {
+	color: #ad9800;
+	border-bottom: solid 1px #ad9800;
+}
+.warning-text {
+	color: #ad9800;
+	background: none;
+	border: none;
+}
+button {
+	cursor: pointer;
 }
 
 // ---------------------------------------------- brand colors
