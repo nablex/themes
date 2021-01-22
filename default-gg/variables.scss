@@ -1,7 +1,7 @@
 $font-family: "Lato", "open-sans", sans-serif;
 $font-family-alt: $font-family;
 $font-icon-family: "Font Awesome 5 Free";
-
+$icon-family: "Font Awesome 5 Free";
 
 /* make sure aggregate charts take up the full height, otherwise the legend might for example get cut off even though there is plenty of space */
 [route="frappe-aggregate-chart"] {
