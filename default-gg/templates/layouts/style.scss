@@ -15,8 +15,11 @@
 	}
 }
 .basic-container {
-	max-width: 64rem;
-	margin: 0 auto;
+	// we want to allow full width rows to still happen
+	.page-row:not(.full-width) {
+		max-width: 64rem;
+		margin: 0 auto;
+	}
 	.basic-main-menu.page-actions-root {
 		background-color: white;
 		border: solid 1px $color-primary-lighter;

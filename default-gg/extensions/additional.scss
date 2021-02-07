@@ -1,3 +1,101 @@
+// without this, it is defined as an inline block, which results in a magical 3 pixel difference between the label and the dropdown in firefox
+.n-form .n-form-combo.n-form-component {
+	display: block;
+}
+
+@include media("<tablet") {
+	.menu {
+		position: relative;
+		.mobile-menu {
+			position: initial !important;
+			display: block !important;
+			margin-left: auto;
+			.page-actions {
+				width: 100vw;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				.page-action {
+					display: block;
+				}
+			}
+		}
+		.page-action:not(.retain-mobile) {
+			display: none;
+		}
+	}
+}
+@include media(">=tablet") {
+	.menu {
+		.mobile-menu {
+			display: none;
+		}
+	}
+}
+@include media("<tablet") {
+	.page-row {
+		flex-direction: column;
+		.align-start {
+			align-self: stretch;
+		}
+		img {
+			max-width: calc(100vw - 2rem);
+			height: auto;
+		}
+	}
+	.n-form .n-form-component {
+		min-width: auto;
+	}
+	.n-prompt-content {
+		width: 90vw;
+	}
+}
+
+.page-actions.menu .is-active {
+	border: dashed 1px $color-primary-light;
+	border-radius: 10px;
+}
+
+// less hard background color for selected
+[template="data-table-list"] table tbody tr.selected td {
+	background-color: $color-primary-lighter;
+}
+
+.page-cell.content-cell {
+	padding: 0 !important;
+}
+
+.properties-cell {
+	padding: 1.3rem !important;
+	.page-fields.row {
+		border: none;
+		padding: 0;
+		margin: 0;
+		background-color: transparent;
+	}
+}
+
+.align-start {
+	align-self: start;
+}
+
+.page-prompt.overflow {
+	.n-prompt-content {
+		overflow: auto;
+		max-height: 90vh;
+		max-width: 90vw;
+	}
+}
+.page-prompt.visible {
+	.n-prompt-content {
+		overflow: visible;
+	}
+}
+.page-prompt ul.page-actions {
+	margin: 1rem 0;
+	text-align: right;
+}
+
 .nabu-cms-core-login .oauth2 {
 	text-align: center;
 	margin: 2rem 0;
