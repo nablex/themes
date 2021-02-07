@@ -53,6 +53,10 @@ $icon-family: "Font Awesome 5 Free";
 }
 
 
+$color-warning-dark: #534c10;
+$color-warning-base: #ad9800;
+$color-warning-light: #e7e0aa;
+
 .danger {
 	border-bottom: solid 1px red;
 	color: red;
@@ -72,11 +76,11 @@ $icon-family: "Font Awesome 5 Free";
 	border: none;
 }
 .warning {
-	color: #ad9800;
-	border-bottom: solid 1px #ad9800;
+	color: $color-warning-base;
+	border-bottom: solid 1px $color-warning-base;
 }
 .warning-text {
-	color: #ad9800;
+	color: $color-warning-base;
 	background: none;
 	border: none;
 }
