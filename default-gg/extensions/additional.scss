@@ -15,6 +15,15 @@
 	}
 }
 
+// position the reload icon to the top right
+.data-filter-default.always-open {
+	.fa-sync {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+}
+
 // the default filter
 .n-form.filter {
 	> .n-form-content {
