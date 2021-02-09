@@ -1,3 +1,31 @@
+pre.hljs {
+	border: solid 1px $color-neutral-light;
+	border-radius: 5px;
+	* {
+		font-size: 0.7rem;
+	}
+}
+
+.page-fields.facts {
+	dt {
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+		color: #333;
+	}
+	.code {
+		font-family: Monospace;
+		font-size: 0.7rem;
+	}
+	.page-field + .page-field {
+		margin-top: 1rem;
+	}
+}
+
+.ace_editor * {
+	// it does _not_ like to be set to anything else it seems
+	font-size: 12px;
+}
+
 .data-table-list {
 	.page-field-fragment a {
 		color: steelblue;

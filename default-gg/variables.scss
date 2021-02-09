@@ -3,6 +3,13 @@ $font-family-alt: $font-family;
 $font-icon-family: "Font Awesome 5 Free";
 $icon-family: "Font Awesome 5 Free";
 
+// having default z-indexes on layers messes up page builder
+// the problem is that the sidebars are fixed positioned and inline
+// popping them out to the root causes other issues (we did this initially)
+// leaving them in the DOM means the z-index-on-everything interferes with the sidebar
+// this is only if the content is set to for example 100vw or is just bigger than can be contained in the view between the sidebars
+$layers-levels-z: ();
+
 /* make sure aggregate charts take up the full height, otherwise the legend might for example get cut off even though there is plenty of space */
 [route="frappe-aggregate-chart"] {
 	height: 100%;
