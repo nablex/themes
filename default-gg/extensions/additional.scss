@@ -1,3 +1,19 @@
+.page-actions.tabs {
+	display: flex;
+	.page-action {
+		background-color: transparent;
+	}
+	.page-action-entry {
+		background-color: transparent;
+		padding: 1rem;
+		border: none;
+		border-bottom: solid 2px $color-neutral-light;
+		&.is-active {
+			border-bottom-color: $color-primary-dark;
+		}
+	}
+}
+
 // if we have data in the sidebar, make it wide enough
 .n-sidebar.content-sidebar {
 	.data-cell {
