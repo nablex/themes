@@ -1,9 +1,14 @@
-.page-actions.tabs {
+// make sure it doesn't overflow the screen
+pre.hljs {
+	white-space: pre-wrap;
+}
+
+.page-actions.tabs, .form-tabs {
 	display: flex;
 	.page-action {
 		background-color: transparent;
 	}
-	.page-action-entry {
+	.page-action-entry, button {
 		background-color: transparent;
 		padding: 1rem;
 		border: none;
@@ -12,6 +17,9 @@
 			border-bottom-color: $color-primary-dark;
 		}
 	}
+}
+.form-tabs {
+	margin-bottom: 1rem;
 }
 
 // if we have data in the sidebar, make it wide enough
